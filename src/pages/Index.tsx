@@ -215,7 +215,7 @@ const TrackingSection = () => (
           <div className="space-y-4">
             <div>
               <label className="text-sm font-medium text-foreground mb-2 block">Tracking Number</label>
-              <Input placeholder="e.g., SS1234567890" />
+              <Input placeholder="e.g., GE1234567890" />
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-2 block">Destination Country (Optional)</label>

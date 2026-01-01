@@ -27,7 +27,7 @@ import Sustainability from "./pages/Sustainability";
 import InvestorRelations from "./pages/InvestorRelations";
 import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
-import ChatWidget from "./components/ChatWidget";
+import LiveChatWidget from "./components/LiveChatWidget";
 
 const queryClient = new QueryClient();
 
@@ -64,7 +64,7 @@ const App = () => (
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
-            <ChatWidget />
+            <LiveChatWidget />
           </BrowserRouter>
           </TooltipProvider>
         </AuthProvider>

@@ -74,6 +74,112 @@ export type Database = {
         }
         Relationships: []
       }
+      chat_conversations: {
+        Row: {
+          id: string
+          user_id: string | null
+          user_email: string | null
+          user_name: string | null
+          status: string
+          assigned_agent_id: string | null
+          subject: string | null
+          created_at: string
+          updated_at: string
+          closed_at: string | null
+        }
+        Insert: {
+          id?: string
+          user_id?: string | null
+          user_email?: string | null
+          user_name?: string | null
+          status?: string
+          assigned_agent_id?: string | null
+          subject?: string | null
+          created_at?: string
+          updated_at?: string
+          closed_at?: string | null
+        }
+        Update: {
+          id?: string
+          user_id?: string | null
+          user_email?: string | null
+          user_name?: string | null
+          status?: string
+          assigned_agent_id?: string | null
+          subject?: string | null
+          created_at?: string
+          updated_at?: string
+          closed_at?: string | null
+        }
+        Relationships: []
+      }
+      chat_messages: {
+        Row: {
+          id: string
+          conversation_id: string
+          sender_id: string | null
+          sender_type: string
+          sender_name: string | null
+          content: string
+          read_at: string | null
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          conversation_id: string
+          sender_id?: string | null
+          sender_type: string
+          sender_name?: string | null
+          content: string
+          read_at?: string | null
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          conversation_id?: string
+          sender_id?: string | null
+          sender_type?: string
+          sender_name?: string | null
+          content?: string
+          read_at?: string | null
+          created_at?: string
+        }
+        Relationships: []
+      }
+      notification_logs: {
+        Row: {
+          id: string
+          shipment_id: string | null
+          email: string
+          notification_type: string
+          status: string
+          error_message: string | null
+          created_at: string
+          sent_at: string | null
+        }
+        Insert: {
+          id?: string
+          shipment_id?: string | null
+          email: string
+          notification_type: string
+          status?: string
+          error_message?: string | null
+          created_at?: string
+          sent_at?: string | null
+        }
+        Update: {
+          id?: string
+          shipment_id?: string | null
+          email?: string
+          notification_type?: string
+          status?: string
+          error_message?: string | null
+          created_at?: string
+          sent_at?: string | null
+        }
+        Relationships: []
+      }
+      }
       profiles: {
         Row: {
           address: string | null

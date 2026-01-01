@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import {
   LayoutDashboard, Package, Users, BarChart3, Settings,
   Loader2, ShieldAlert, TrendingUp, TrendingDown, Clock,
-  CheckCircle2, Truck, Plane, AlertCircle
+  CheckCircle2, Truck, Plane, AlertCircle, MessageCircle
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
@@ -14,6 +14,7 @@ import AdminShipments from "@/components/admin/AdminShipments";
 import AdminAnalytics from "@/components/admin/AdminAnalytics";
 import AdminUsers from "@/components/admin/AdminUsers";
 import AdminSettings from "@/components/admin/AdminSettings";
+import AdminChatDashboard from "@/components/admin/AdminChatDashboard";
 
 const Admin = () => {
   const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
@@ -113,6 +114,10 @@ const Admin = () => {
                   <Package className="w-4 h-4" />
                   Shipments
                 </TabsTrigger>
+                <TabsTrigger value="chat" className="flex items-center gap-2">
+                  <MessageCircle className="w-4 h-4" />
+                  Live Chat
+                </TabsTrigger>
                 <TabsTrigger value="analytics" className="flex items-center gap-2">
                   <BarChart3 className="w-4 h-4" />
                   Analytics
@@ -129,6 +134,10 @@ const Admin = () => {
 
               <TabsContent value="shipments">
                 <AdminShipments />
+              </TabsContent>
+
+              <TabsContent value="chat">
+                <AdminChatDashboard />
               </TabsContent>
 
               <TabsContent value="analytics">

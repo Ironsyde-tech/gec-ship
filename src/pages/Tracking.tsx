@@ -395,7 +395,7 @@ const Tracking = () => {
               <div className="relative flex-1">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <Input 
-                  placeholder="Enter tracking number (e.g., SS1234567890)"
+                  placeholder="Enter tracking number (e.g., GE1234567890)"
                   value={trackingNumber}
                   onChange={(e) => setTrackingNumber(e.target.value.toUpperCase())}
                   onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
@@ -408,7 +408,7 @@ const Tracking = () => {
               </Button>
             </div>
             <p className="text-primary-foreground/50 text-sm mt-3">
-              Try: SS1234567890, SS0987654321, or SS1122334455
+              Try: GE1234567890, GE0987654321, or GE1122334455
             </p>
           </div>
         </div>
